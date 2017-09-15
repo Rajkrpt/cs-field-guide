@@ -65,5 +65,4 @@ class ChapterLoader(BaseLoader):
 
 
         self.log("Added Chapter: {}".format(chapter.name))
-
         self.log("")

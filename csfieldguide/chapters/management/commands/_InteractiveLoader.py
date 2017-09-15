@@ -27,7 +27,6 @@ class InteractiveLoader(BaseLoader):
     @transaction.atomic
     def load(self):
         """Load the paths to interactive templates."""
-
         # Create interactive objectd and save to the db
         for interactive in self.interactives:
             print(interactive)
