@@ -63,6 +63,5 @@ class ChapterLoader(BaseLoader):
             self.BASE_PATH
         ).load()
 
-
         self.log("Added Chapter: {}".format(chapter.name))
         self.log("")
