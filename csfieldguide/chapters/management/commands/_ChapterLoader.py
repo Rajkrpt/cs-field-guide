@@ -61,7 +61,7 @@ class ChapterLoader(BaseLoader):
             self.structure_file_path,
             interactives,
             self.BASE_PATH
-        )
+        ).load()
 
 
         self.log("Added Chapter: {}".format(chapter.name))

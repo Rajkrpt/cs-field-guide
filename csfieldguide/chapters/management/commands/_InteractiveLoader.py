@@ -21,17 +21,22 @@ class InteractiveLoader(BaseLoader):
         """
         super().__init__(BASE_PATH)
         self.structure_file_path = structure_file_path
-        # self.BASE_PATH = os.path.join(BASE_PATH, "chapters")
+        self.interactives = interactives
+        self.BASE_PATH = os.path.join(BASE_PATH, "chapters")
 
     @transaction.atomic
     def load(self):
         """Load the paths to interactive templates."""
 
-        # Create interactive object and save to the db
-        interactive = Interactive(
-        )
-        interactive.save()
+        # Create interactive objectd and save to the db
+        for interactive in self.interactives:
+            print(interactive)
+            new_interactive = Interactive(
+                slug=interactive,
+                template="chapters/interactives/{}.html".format(interactive)
+            )
+            new_interactive.save()
 
-        self.log("Added Interactive: {}".format(interactive.name))
+            self.log("Added Interactive: {}".format(new_interactive.slug))
 
         self.log("")
