@@ -61,6 +61,15 @@ class InteractiveView(generic.DetailView):
     #     )
 
 
+# class IframeInteractiveView(generic.DetailView):
+#     """View for a specific topic."""
+
+#     model = Interactive
+#     # slug_url_kwarg = "interactive_slug"
+#     template_name = "chapters/interactives/rsa-no-padding.html"
+
+
+
 def glossary_json(request, **kwargs):
     """Provide JSON data for glossary term.
 
