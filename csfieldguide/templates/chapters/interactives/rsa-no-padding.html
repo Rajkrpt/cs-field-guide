@@ -1,3 +1,4 @@
+{% load static %}
 
     <!-- ### Start of required HTML for inline interactives ### -->
     <div class="row interactive" id="interactive-rsa-no-padding" data-iframe-height>
@@ -15,9 +16,9 @@
         <h5><span id="interactive-rsa-no-padding-output-type">Cipher</span> Text</h5>
         <textarea id="interactive-rsa-no-padding-output-text" rows="5"></textarea>
       </div>
-      <link rel="stylesheet" href="./css/rsa-no-padding.css">
-      <script type="text/javascript" src="./js/rsa-jsencrypt-no-padding.js"></script>
-      <script type="text/javascript" src="./js/third-party/jsencrypt-no-padding.js"></script>
-      <script type="text/javascript" src="../base-files/js/third-party/iframeResizer.contentWindow.min.js"></script>
+      <link rel="stylesheet" href="{% static 'interactives/rsa-no-padding/css/rsa-no-padding.css' %}">
+      <script type="text/javascript" src="{% static 'interactives/rsa-no-padding/js/rsa-jsencrypt-no-padding.js' %}"></script>
+      <script type="text/javascript" src="{% static 'interactives/rsa-no-padding/js/third-party/jsencrypt-no-padding.js' %}"></script>
+      <script type="text/javascript" src="{% static 'interactives/rsa-no-padding/js/third-party/iframeResizer.contentWindow.min.js' %}"></script>
     </div>
     <!-- ### End of required HTML for inline interactives ### -->
