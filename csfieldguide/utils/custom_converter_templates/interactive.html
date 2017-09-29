@@ -4,7 +4,7 @@
 </remove>
 {% elif type == 'iframe' -%}
 
-<iframe src="{{ "{% url 'chapters:iframeinteractive' %}" }}{% if parameters %}?{{ parameters }}{% endif %}">
+<iframe src="{{ "{% url 'chapters:interactive' '" }}{{ name }}{{ "' %}" }}{% if parameters %}?{{ parameters }}{% endif %}">
 
 <p>Your browser does not support iframes.</p>
 </iframe>

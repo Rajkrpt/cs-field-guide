@@ -14,9 +14,9 @@ urlpatterns = [
         name="index"
     ),
     url(
-        r"^iframeinteractive/",
-        TemplateView.as_view(template_name="chapters/interactives/rsa-no-padding.html"),
-        name="iframeinteractive"
+        r"^iframeinteractive/(?P<interactive_slug>[-\w]+)/$",
+        TemplateView.as_view(template_name="chapters/interactives/iframe-base.html"),
+        name="iframe_interactive"
     ),
     # eg: /chapters/interactives/sorting-algorithms/
     url(
